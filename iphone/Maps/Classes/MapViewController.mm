@@ -927,7 +927,7 @@ NSString *const kPP2BookmarkEditingSegue = @"PP2BookmarkEditing";
     [UIKeyCommand keyCommandWithInput:@"=" modifierFlags:UIKeyModifierCommand action:@selector(zoomIn)], // Alternative, not shown when holding CMD
     [UIKeyCommand keyCommandWithInput:@"+" modifierFlags:UIKeyModifierCommand action:@selector(zoomIn) discoverabilityTitle:@"Zoom In"],
     [UIKeyCommand keyCommandWithInput:UIKeyInputEscape modifierFlags:0 action:@selector(goBack) discoverabilityTitle:@"Go Back"],
-    [UIKeyCommand keyCommandWithInput:@"0" modifierFlags:UIKeyModifierCommand action:@selector(reCenterMap) discoverabilityTitle:@"Recenter the map"]
+    [UIKeyCommand keyCommandWithInput:@"0" modifierFlags:UIKeyModifierCommand action:@selector(reCenterMap) discoverabilityTitle:@"Switch position mode"]
    ];
 }
 
@@ -939,7 +939,7 @@ NSString *const kPP2BookmarkEditingSegue = @"PP2BookmarkEditing";
   GetFramework().Scale(Framework::SCALE_MAG, true);
 }
 
-- (void)reCenterMap {
+- (void)switchPositionMode {
   GetFramework().SwitchMyPositionNextMode();
 }
 
